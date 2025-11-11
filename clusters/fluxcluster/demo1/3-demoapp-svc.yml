@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: demoapp
+  name: demosvc
+  namespace: demoapp-ns
+spec:
+  ports:
+  - name: demoapp-ports
+    nodePort: 31000
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: demoapp
+  type: NodePort
+
+
+#   Client (outside cluster)
+#        |
+#        v
+# <NodeIP>:31000  ← (nodePort)
+#        |
+#        v
+# Service:80       ← (port)
+#        |
+#        v
+# Pod:80           ← (targetPort)
