@@ -9,3 +9,5 @@ spec:
   ref:
     branch: master
   url: https://github.com/alizaidansp/KubernetesVotingApp.git
+  secretRef:
+    name: devopsinaction-secret
