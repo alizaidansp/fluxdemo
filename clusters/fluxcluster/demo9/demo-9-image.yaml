@@ -5,5 +5,5 @@ metadata:
   name: demoapp-9-image
   namespace: flux-system
 spec:
-  image: yogeshraheja
+  image: yogeshraheja/fluxdemo
   interval: 1m0s
