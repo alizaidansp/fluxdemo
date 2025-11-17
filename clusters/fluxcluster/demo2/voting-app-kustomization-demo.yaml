@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./
+  path: ./ #all changes from the mainfest files in the root of the source repo
   prune: true
   sourceRef:
     kind: GitRepository
